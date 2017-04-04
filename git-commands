@@ -1,0 +1,72 @@
+ Command line instructions
+Git global setup
+
+git config --global user.name "**"
+git config --global user.email "abc@gmail.com"
+
+Create a new repository
+
+git clone git@gitlab.com:firzanshaikh/demo.git
+cd demo
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+
+cd existing_folder
+git init
+git remote add origin git@gitlab.com:firzanshaikh/demo.git
+git add .
+git commit
+git push -u origin master
+
+Existing Git repository
+
+cd existing_repo
+git remote add origin git@gitlab.com:firzanshaikh/demo.git
+git push -u origin --all
+git push -u origin --tags
+
+
+------------------
+git remote -v
+
+git remote set-url origin https://gitlab.com/firzanshaikh/demo.git
+
+origin git remote add origin 
+
+-----------------------
+
+git rm -r --cached .
+git add -A 
+or 
+git add .
+git commit -am 'Removing ignored files'
+
+The first command will un-track all files in your git repository.
+
+The second command will then add all of the files in your git repository, except those that match rules in your .gitignore. Thus, we have un-tracked several files with just two commands.
+
+Then the last command is to commit the changes, which will just be removed files.
+
+
+-------------------------
+
+git clean -d -fx ""
+
+git rm -r --cached .   Remove all tracked files, including wanted and unwanted. 
+git add . – All files will be added back in, except those in .gitignore .
+
+--------------------
+
+git reset to previous commit 
+- it is a potentially dangerous command, since it throws away all your uncommitted changes.
+
+- git reset --hard HEAD
+
+------------------
+git clean -f will remove untracked files
+git clean -xdf
+
